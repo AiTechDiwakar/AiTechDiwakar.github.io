@@ -1,92 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIWAKAR CHOUBEY | Ex-Tata Steel • Ex-MachineMax</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body{font-family:'Inter',sans-serif; background:#fcfcf9}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif}
-#cursor{position:fixed;width:20px;height:20px;border:2px solid black;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;background:white;transition:transform 0.15s}
-.card:hover{transform:rotateY(5deg) rotateX(5deg) scale(1.02)}
-.timeline-line{background:repeating-linear-gradient(to bottom, black 0 8px, transparent 8px 16px)}
-.type::after{content:'|';animation:blink 1s infinite}
-@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090b" />
+  <title>Diwakar Choubey | Data Analyst & AI Developer</title>
+  <meta name="description" content="Portfolio of Diwakar Choubey — Data Analyst, Mechanical Engineer, Field IoT Engineer, GDG Ranchi Community Member, NVIDIA Developer Program Member." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#09090b", panel: "#111114", accent: "#d9ff43" },
+          fontFamily: { sans: ["Space Grotesk", "sans-serif"], mono: ["DM Mono", "monospace"] }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { background: #09090b; color: #f4f4f5; font-family: "Space Grotesk", sans-serif; }
+    ::selection { background: #d9ff43; color: #09090b; }
+   .grid-bg { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 42px 42px; }
+   .accent-text { color: #d9ff43; }
+   .panel { background: rgba(17,17,20,.82); border: 1px solid rgba(255,255,255,.09); transition: border-color.25s, transform.25s; }
+   .panel:hover { border-color: rgba(217,255,67,.45); transform: translateY(-3px); }
+   .nav-link { color: #a1a1aa; transition: color.2s; }
+   .nav-link:hover { color: #d9ff43; }
+   .primary-button { background: #d9ff43; color: #09090b; transition: transform.2s, background.2s; }
+   .primary-button:hover { background: #e5ff79; transform: translateY(-2px); }
+   .outline-button { border: 1px solid rgba(255,255,255,.2); transition: border-color.2s, color.2s; }
+   .outline-button:hover { border-color: #d9ff43; color: #d9ff43; }
+   .section-label { font-family: "DM Mono", monospace; color: #d9ff43; font-size:.78rem; letter-spacing:.13em; text-transform: uppercase; }
+   .skill-chip { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.035); }
+    /* CHALTA HUA TICKER */
+   .marquee { overflow: hidden; white-space: nowrap; background: #d9ff43; color: #09090b; padding: 14px 0; font-family: "DM Mono", monospace; font-weight: 700; text-transform: uppercase; font-size: 14px; }
+   .marquee-track { display: inline-flex; animation: scroll 40s linear infinite; }
+   .marquee-track:hover { animation-play-state: paused; }
+   .marquee-item { margin-right: 50px; display: flex; align-items: center; }
+   .marquee-item::after { content: "✳"; margin-left: 50px; font-size: 18px; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
 </head>
-<body class="text-black overflow-x-hidden">
-<div id="cursor"></div>
+<body class="antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-xl">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-[72px] flex items-center justify-between">
+      <a href="#home" class="font-bold text-xl tracking-tight">Diwakar<span class="accent-text">.</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="primary-button rounded-lg px-4 py-2.5 text-sm font-semibold">Let's Connect ↗</a>
+    </nav>
+  </header>
 
-<nav class="fixed top-0 w-full z-50 bg-[#fcfcf9]/80 backdrop-blur-xl border-b border-black/5">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<div class="font-bold tracking-tighter">AiTechDiwakar<span class="text-blue-600">.</span> <span class="ml-3 text-xs bg-black text-white px-2 py-1 rounded-full">● LIVE from Jamshedpur</span></div>
-<div class="flex gap-3"><a href="mailto:diwakarchoubey11@zohomail.in" class="bg-black text-white px-5 py-2 rounded-full text-sm">Download CV</a></div>
-</div>
-</nav>
+  <main>
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden grid-bg">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 75% 35%, rgba(217,255,67,.09), transparent 42%);"></div>
+      <div class="relative max-w-7xl mx-auto w-full px-5 md:px-8 pt-32 pb-20">
+        <div class="grid lg:grid-cols-[1.3fr_.7fr] gap-14 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-8">
+              <span class="h-2 w-2 rounded-full bg-accent"></span>
+              <span class="text-xs md:text-sm text-zinc-300">Data Analyst | GDG Ranchi | NVIDIA Developer Program Member</span>
+            </div>
+            <p class="section-label mb-5">Hello, I'm Diwakar Choubey</p>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">Data into <span class="accent-text">insights.</span><br />Ideas into <span class="text-zinc-400">AI.</span></h1>
+            <p class="mt-7 max-w-2xl text-lg md:text-xl text-zinc-400 leading-relaxed">Mechanical Engineer turned Data Analyst & IoT Engineer, working at the intersection of operations, data analytics and AI development. I turn machine data into business money.</p>
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a href="#projects" class="primary-button inline-flex items-center gap-2 rounded-lg px-6 py-3.5 font-semibold">Explore My Work ↗</a>
+              <a href="#contact" class="outline-button inline-flex items-center gap-2 rounded-lg px-6 py-3.5 font-semibold">Contact Me</a>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <div class="panel rounded-2xl p-6 rotate-1">
+              <div class="flex items-center justify-between border-b border-white/10 pb-4"><div><p class="text-sm text-zinc-400">Current Focus</p><p class="text-lg font-semibold mt-1">Data + Intelligence</p></div><span class="text-2xl accent-text">✳</span></div>
+              <div class="space-y-5 mt-6">
+                <div class="rounded-xl bg-white/[.035] p-4"><div class="flex justify-between text-sm mb-3"><span class="text-zinc-300">Data Analytics</span><span class="accent-text">01</span></div><div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-4/5 bg-accent rounded-full"></div></div></div>
+                <div class="rounded-xl bg-white/[.035] p-4"><div class="flex justify-between text-sm mb-3"><span class="text-zinc-300">IoT & Operations</span><span class="accent-text">02</span></div><div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-3/4 bg-accent rounded-full"></div></div></div>
+                <div class="rounded-xl bg-white/[.035] p-4"><div class="flex justify-between text-sm mb-3"><span class="text-zinc-300">AI Development</span><span class="accent-text">03</span></div><div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-4/5 bg-accent rounded-full"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="max-w-7xl mx-auto px-6 pt-32 pb-20">
-<div class="grid md:grid-cols-12 gap-10 items-end">
-<div class="md:col-span-8">
-<h1 class="text-[14vw] md:text-[92px] leading-[0.85] font-bold tracking-tighter">DIWAKAR<br>CHOUBEY</h1>
-<h2 class="mt-6 text-2xl md:text-3xl font-medium">I'm a <span id="typing" class="type text-blue-600 font-bold"></span></h2>
-<p class="mt-6 text-lg text-gray-600 max-w-xl">Ex-Tata Steel (5+ Years) • Ex-MachineMax IoT Engineer • Jamshedpur, India. I turn machine data into business money.</p>
-</div>
-<div class="md:col-span-4 space-y-4">
-<div class="bg-black text-white rounded-[24px] p-6"><div class="text-4xl font-bold">5+</div><div class="text-sm text-gray-400">Years at Tata Steel - Production & Operations</div></div>
-<div class="bg-[#ffde59] rounded-[24px] p-6 border border-black"><div class="text-4xl font-bold">2+</div><div class="text-sm">Months as IoT Engineer at MachineMax - Industrial IoT</div></div>
-<div class="flex gap-2 flex-wrap"><span class="px-3 py-1 border border-black rounded-full text-xs">Java</span><span class="px-3 py-1 border border-black rounded-full text-xs">Python</span><span class="px-3 py-1 border border-black rounded-full text-xs bg-black text-white">Power BI</span><span class="px-3 py-1 border border-black rounded-full text-xs">SQL</span></div>
-</div>
-</div>
-</section>
+    <section id="about" class="py-24 md:py-32 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="grid md:grid-cols-[.7fr_1.3fr] gap-12 md:gap-20">
+          <div><p class="section-label mb-4">01 / About</p><h2 class="text-4xl md:text-5xl font-bold leading-tight">Curious by nature.<span class="text-zinc-500"> Driven by data.</span></h2></div>
+          <div>
+            <p class="text-lg text-zinc-300 leading-relaxed">I'm Diwakar Choubey — from Industrial Automation at Bosch India (Aug 2017 - Dec 2017) to Mechanical Engineer & Data Analyst at Tata Steel (Apr 2020 - Sep 2025), and Field IoT Engineer at MachineMax (10 Aug 2026 - 01 Oct 2026). Now active in GDG Ranchi (09 Oct 2026 - Present) & NVIDIA Developer Program (11 Oct 2026 - Present).</p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+              <div class="panel rounded-xl p-5"><span class="text-2xl accent-text">↗</span><h3 class="font-semibold mt-3">Operations to Analytics</h3><p class="text-sm text-zinc-400 mt-2">Translating shop-floor & equipment data into actionable dashboards.</p></div>
+              <div class="panel rounded-xl p-5"><span class="text-2xl accent-text">⌘</span><h3 class="font-semibold mt-3">Community Learner</h3><p class="text-sm text-zinc-400 mt-2">freeCodeCamp (10 Feb 2026 - Present), GDG Ranchi, NVIDIA Developer Program.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="max-w-7xl mx-auto px-6 py-20">
-<h2 class="text-4xl font-bold tracking-tighter mb-12">Journey that recruiters love to scroll</h2>
-<div class="relative pl-10">
-<div class="absolute left-3 top-0 bottom-0 w-[2px] timeline-line"></div>
-<div class="space-y-12">
-<div class="relative bg-white border border-black/10 rounded-[24px] p-8 shadow-[8px_8px_0px_black] card transition-all"><div class="absolute -left-[42px] top-8 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div><span class="text-xs bg-blue-600 text-white px-3 py-1 rounded-full">August2026- October2026</span><h3 class="mt-3 text-xl font-bold">Ex-IoT Engineer @ MachineMax</h3><p class="text-sm text-gray-600 mt-2">Sensor integration, machine health score, real-time alerts using Java/Python. Worked with Tata Steel as client.</p></div>
-<div class="relative bg-white border border-black/10 rounded-[24px] p-8 shadow-[8px_8px_0px_black] card transition-all"><div class="absolute -left-[42px] top-8 w-4 h-4 bg-black rounded-full border-4 border-white"></div><span class="text-xs bg-black text-white px-3 py-1 rounded-full">2020-2025</span><h3 class="mt-3 text-xl font-bold">Ex-Employee @ Tata Steel - 5+ Years</h3><p class="text-sm text-gray-600 mt-2">Core manufacturing, safety, quality control, team handling. Yahi se industrial data ka value samjha.</p></div>
-</div>
-</div>
-</section>
+    <section id="skills" class="py-24 md:py-28 bg-white/[.02] border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="max-w-3xl mb-12"><p class="section-label mb-4">02 / Skills</p><h2 class="text-4xl md:text-5xl font-bold">Tools I work with<span class="accent-text">.</span></h2></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">01</div><h3 class="text-xl font-semibold">Data Analytics</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">SQL</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Data Modeling</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Excel</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">EDA</span></div></div>
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">02</div><h3 class="text-xl font-semibold">Programming</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Python</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Pandas</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">CUDA</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Git</span></div></div>
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">03</div><h3 class="text-xl font-semibold">Visualization & BI</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Power BI</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Dashboards</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Matplotlib</span></div></div>
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">04</div><h3 class="text-xl font-semibold">AI & Accelerated Computing</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Gemini</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">LLM APIs</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">GPU</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Deep Learning</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">NVIDIA</span></div></div>
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">05</div><h3 class="text-xl font-semibold">Cloud & Mobile</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Google Cloud</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Android</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Tailwind CSS</span></div></div>
+          <div class="panel rounded-2xl p-6"><div class="text-2xl accent-text mb-4">06</div><h3 class="text-xl font-semibold">IoT & Ops</h3><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded-md px-3 py-1.5 text-sm">IoT Sensors</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">MachineMax</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Industrial Automation</span><span class="skill-chip rounded-md px-3 py-1.5 text-sm">Bosch</span></div></div>
+        </div>
+      </div>
+    </section>
 
-<section class="max-w-7xl mx-auto px-6 py-10">
-<div class="bg-[#111] text-white rounded-[32px] p-10 md:p-14 grid md:grid-cols-2 gap-10 items-center">
-<div><h2 class="text-4xl font-bold">I don't just code. I show profit in dashboards.</h2><p class="mt-4 text-gray-400">SQL + Power BI + Excel se maine downtime, production loss aur maintenance cost ka live dashboard banaya hai. Recruiter isko dekh ke ruk jayega.</p><div class="mt-6 flex gap-3"><div class="bg-white/10 px-4 py-2 rounded-full text-sm">📊 Power BI</div><div class="bg-white/10 px-4 py-2 rounded-full text-sm">SQL</div><div class="bg-white/10 px-4 py-2 rounded-full text-sm">Excel</div></div></div>
-<div class="bg-white text-black rounded-[20px] p-4"><div class="h-48 bg-gradient-to-br from-blue-100 to-yellow-100 rounded-xl flex items-center justify-center font-bold text-center">[ Your Power BI Screenshot Yaha Lagega ]<br>Upload karke embed kar dunga</div><div class="mt-4 flex justify-between text-xs"><span>⏱️ Avg. Machine Uptime: 94.2%</span><span class="text-green-600 font-bold">↑ 12% Saved</span></div></div>
-</div>
-</section>
+    <!-- MOVING EXPERIENCE TICKER -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-item">BOSCH INDIA — Industrial Automation — Aug 2017 to Dec 2017</span>
+        <span class="marquee-item">TATA STEEL — Mechanical Engineer / Data Analyst — Apr 2020 to Sep 2025 — 5+ Years</span>
+        <span class="marquee-item">FREECODECAMP — 10 Feb 2026 to Present</span>
+        <span class="marquee-item">MACHINEMAX — Field IoT Engineer — 10 Aug 2026 to 01 Oct 2026</span>
+        <span class="marquee-item">GDG RANCHI — 09 Oct 2026 to Present</span>
+        <span class="marquee-item">NVIDIA DEVELOPER PROGRAM MEMBER — 11 Oct 2026 to Present</span>
+        <span class="marquee-item">BOSCH INDIA — Industrial Automation — Aug 2017 to Dec 2017</span>
+        <span class="marquee-item">TATA STEEL — Mechanical Engineer / Data Analyst — Apr 2020 to Sep 2025 — 5+ Years</span>
+        <span class="marquee-item">FREECODECAMP — 10 Feb 2026 to Present</span>
+        <span class="marquee-item">MACHINEMAX — Field IoT Engineer — 10 Aug 2026 to 01 Oct 2026</span>
+        <span class="marquee-item">GDG RANCHI — 09 Oct 2026 to Present</span>
+        <span class="marquee-item">NVIDIA DEVELOPER PROGRAM MEMBER — 11 Oct 2026 to Present</span>
+      </div>
+    </div>
 
-<section id="work" class="max-w-7xl mx-auto px-6 py-20">
-<h2 class="text-4xl font-bold tracking-tighter mb-8">Projects - Hover karo, magic dekho</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="group border border-black rounded-[24px] p-1"><div class="bg-[#f3f3f0] rounded-[20px] p-8 h-full group-hover:bg-black group-hover:text-white transition-all"><h3 class="font-bold">Predictive Maintenance System</h3><p class="text-sm mt-2 opacity-70">Python + SQL se machine failure 3 din pehle predict.</p><div class="mt-6 text-xs">Java • Python • SQL</div></div></div>
-<div class="group border border-black rounded-[24px] p-1"><div class="bg-[#ffde59] rounded-[20px] p-8 h-full"><h3 class="font-bold">Power BI - Tata Steel Report</h3><p class="text-sm mt-2">5 years ke production data ka executive dashboard.</p><div class="mt-6 text-xs">Power BI • Excel</div></div></div>
-<div class="group border border-black rounded-[24px] p-1"><div class="bg-white rounded-[20px] p-8 h-full group-hover:bg-blue-600 group-hover:text-white transition-all"><h3 class="font-bold">IoT Sensor Cloud</h3><p class="text-sm mt-2 opacity-70">MachineMax ke liye live temperature & vibration API.</p><div class="mt-6 text-xs">Java • IoT</div></div></div>
-</div>
-</section>
+    <section id="experience" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="mb-12"><p class="section-label mb-4">03 / Experience & Community</p><h2 class="text-4xl md:text-5xl font-bold">My journey so far<span class="accent-text">.</span></h2></div>
+        <div class="relative ml-2 md:ml-4 border-l border-white/15 pl-7 md:pl-10 space-y-10">
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full bg-zinc-500 ring-4 ring-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">Bosch India</h3><p class="text-zinc-300 mt-1">Industrial Automation</p></div><span class="h-fit rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">Aug 2017 - Dec 2017</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Early exposure to industrial automation systems, PLC, manufacturing processes and automation solutions in an industrial environment.</p>
+            </div>
+          </article>
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full bg-accent ring-4 ring-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">Tata Steel</h3><p class="text-zinc-300 mt-1">Mechanical Engineer / Data Analyst</p></div><span class="h-fit rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">Apr 2020 - Sep 2025</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Worked on mechanical maintenance and operations while supporting data analysis, reporting, and process improvement initiatives. 5+ years turning operational data into insights for efficiency and reliability.</p>
+            </div>
+          </article>
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full border-2 border-accent bg-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">freeCodeCamp</h3><p class="text-zinc-300 mt-1">Learner & Community Member</p></div><span class="h-fit rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">10 Feb 2026 - Present</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Learning and building with open-source curriculum — focusing on data analytics, Python, and web development through hands-on projects and certifications.</p>
+            </div>
+          </article>
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full border-2 border-accent bg-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">MachineMax</h3><p class="text-zinc-300 mt-1">Field IoT Engineer</p></div><span class="h-fit rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">10 Aug 2026 - 01 Oct 2026</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Field deployment and support for IoT-based heavy equipment monitoring solutions. Worked on sensor data, connectivity, and on-site troubleshooting to enable data-driven fleet management.</p>
+            </div>
+          </article>
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full border-2 border-accent bg-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8 border-l-2 border-l-accent/50">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">GDG Ranchi</h3><p class="text-zinc-300 mt-1">Community Member · Google Developer Groups</p></div><span class="h-fit rounded-full bg-accent/20 text-accent border border-accent/30 px-3 py-1 text-xs">09 Oct 2026 - Present</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Part of GDG Ranchi local developer community. Attending DevFest, Build with AI, and Cloud study jams to learn, share, and network with developers.</p><p class="text-[11px] text-zinc-500 mt-3 italic">Community-led group, not employed by or affiliated with Google.</p>
+            </div>
+          </article>
+          <article class="relative"><span class="absolute -left-[35px] md:-left-[47px] top-1 h-3 w-3 rounded-full border-2 border-accent bg-ink"></span>
+            <div class="panel rounded-2xl p-6 md:p-8 border-l-2 border-l-green-400/50">
+              <div class="flex flex-wrap justify-between gap-3"><div><h3 class="text-xl md:text-2xl font-semibold">NVIDIA Developer Program</h3><p class="text-zinc-300 mt-1">Member · Independent Developer</p></div><span class="h-fit rounded-full bg-green-400/10 text-green-300 border border-green-400/20 px-3 py-1 text-xs">11 Oct 2026 - Present</span></div>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Registered member of NVIDIA Developer Program. Learning & building with CUDA, GPU Computing, Deep Learning, and Generative AI — accessing SDKs, docs, and technical resources to accelerate AI projects.</p><p class="text-[11px] text-zinc-500 mt-3 italic">Individual developer program membership, not employment or affiliation with NVIDIA Corporation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="bg-black text-white rounded-t-[40px] py-20 px-6">
-<div class="max-w-7xl mx-auto text-center">
-<h2 class="text-[10vw] md:text-8xl font-bold tracking-tighter leading-none">LET'S<br>TALK</h2>
-<p class="mt-6 text-gray-400">Jamshedpur se hoon, par kaam global karta hoon.</p>
-<div class="mt-10 flex flex-wrap justify-center gap-4">
-<a href="https://wa.me/919939465825" class="bg-[#25D366] text-black px-8 py-3 rounded-full font-bold">WhatsApp Me</a>
-<a href="https://github.com/AiTechDiwakar" class="bg-white text-black px-8 py-3 rounded-full font-bold">GitHub</a>
-<a href="mailto:diwakarchoubey11@zohomail.in" class="border border-white/20 px-8 py-3 rounded-full">Email: diwakarchoubey11@zohomail.in</a>
-</div>
-<p class="mt-16 text-xs text-gray-500">© 2026 Diwakar Choubey • AiTechDiwakar.github.io • Built to keep you scrolling</p>
-</div>
-</section>
+    <section id="projects" class="py-24 md:py-32 bg-white/[.02] border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"><div><p class="section-label mb-4">04 / Projects</p><h2 class="text-4xl md:text-5xl font-bold">Selected work<span class="accent-text">.</span></h2></div><p class="text-zinc-400 max-w-lg leading-relaxed">Practical projects combining operations data, analytics, and AI experimentation.</p></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="panel rounded-2xl overflow-hidden flex flex-col"><div class="h-48 p-6 grid-bg flex items-end" style="background-color: #14170d;"><div class="w-full rounded-xl border border-white/10 bg-black/40 p-4"><div class="flex items-end gap-2 h-16"><div class="w-1/6 h-1/3 bg-accent/50 rounded-t"></div><div class="w-1/6 h-2/3 bg-accent/70 rounded-t"></div><div class="w-1/6 h-1/2 bg-accent/40 rounded-t"></div><div class="w-1/6 h-full bg-accent rounded-t"></div><div class="w-1/6 h-3/4 bg-accent/70 rounded-t"></div><div class="w-1/6 h-2/5 bg-accent/50 rounded-t"></div></div></div></div><div class="p-6 flex flex-col flex-1"><p class="section-label">Data Analytics</p><h3 class="text-xl font-semibold mt-3">Business Insights Dashboard</h3><p class="text-sm text-zinc-400 mt-3 leading-relaxed flex-1">Analyze operational dataset to identify trends and present actionable insights through Power BI dashboard.</p><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded px-2.5 py-1 text-xs">SQL</span><span class="skill-chip rounded px-2.5 py-1 text-xs">Power BI</span></div><a href="https://github.com/AiTechDiwakar" target="_blank" class="outline-button rounded-lg px-4 py-3 text-sm text-center mt-6">View GitHub ↗</a></div></article>
+          <article class="panel rounded-2xl overflow-hidden flex flex-col"><div class="h-48 p-6 grid-bg flex items-center justify-center" style="background-color: #11131a;"><div class="w-full max-w-xs rounded-xl border border-white/10 bg-black/40 p-5"><div class="font-mono text-sm leading-7"><div class="text-zinc-500"># IoT data exploration</div><div><span class="accent-text">import</span> pandas</div><div>data = pd.read_csv('machinemax.csv')</div></div></div></div><div class="p-6 flex flex-col flex-1"><p class="section-label">IoT / Python</p><h3 class="text-xl font-semibold mt-3">Equipment Data Analysis</h3><p class="text-sm text-zinc-400 mt-3 leading-relaxed flex-1">Clean and explore IoT sensor data from heavy equipment, investigate downtime patterns and visualize utilization.</p><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded px-2.5 py-1 text-xs">Python</span><span class="skill-chip rounded px-2.5 py-1 text-xs">Pandas</span><span class="skill-chip rounded px-2.5 py-1 text-xs">IoT</span></div><a href="https://github.com/AiTechDiwakar" target="_blank" class="outline-button rounded-lg px-4 py-3 text-sm text-center mt-6">View GitHub ↗</a></div></article>
+          <article class="panel rounded-2xl overflow-hidden flex flex-col"><div class="h-48 p-6 grid-bg flex items-center justify-center" style="background-color: #15120d;"><div class="w-full max-w-xs rounded-xl border border-white/10 bg-black/40 p-5"><div class="flex items-center gap-3"><div class="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center accent-text text-xl">✳</div><div><div class="text-sm font-semibold">AI Assistant</div><div class="text-xs text-zinc-500">Gemini + CUDA Concept</div></div></div></div></div><div class="p-6 flex flex-col flex-1"><p class="section-label">AI Development</p><h3 class="text-xl font-semibold mt-3">AI-Powered Ops Assistant</h3><p class="text-sm text-zinc-400 mt-3 leading-relaxed flex-1">Build an AI application that answers operational queries using Gemini API and accelerated with NVIDIA stack.</p><div class="flex flex-wrap gap-2 mt-5"><span class="skill-chip rounded px-2.5 py-1 text-xs">Gemini</span><span class="skill-chip rounded px-2.5 py-1 text-xs">GPU</span><span class="skill-chip rounded px-2.5 py-1 text-xs">CUDA</span></div><a href="https://github.com/AiTechDiwakar" target="_blank" class="outline-button rounded-lg px-4 py-3 text-sm text-center mt-6">View GitHub ↗</a></div></article>
+        </div>
+      </div>
+    </section>
 
-<script>
-const roles = ["IoT Engineer", "Data Analyst", "Ex-Tata Steel (5+ yrs)", "Ex-MachineMax", "Power BI Expert"];
-let i=0,j=0,del=false; const el=document.getElementById('typing');
-(function type(){ const txt=roles[i]; if(!del){ el.textContent=txt.slice(0,j++); if(j>txt.length+10){del=true;}} else{el.textContent=txt.slice(0,j--); if(j<0){del=false;i=(i+1)%roles.length;}} setTimeout(type, del?40:120);})();
-const cursor=document.getElementById('cursor'); document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX-10+'px';cursor.style.top=e.clientY-10+'px'});
-document.querySelectorAll('a,.card').forEach(a=>{a.addEventListener('mouseenter',()=>cursor.style.transform='scale(3)');a.addEventListener('mouseleave',()=>cursor.style.transform='scale(1)')});
-</script>
+    <section id="contact" class="py-24 md:py-32 border-t border-white/10 grid-bg">
+      <div class="max-w-5xl mx-auto px-5 md:px-8 text-center"><p class="section-label mb-5">05 / Contact</p><h2 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">Let's build something<span class="accent-text"> meaningful.</span></h2><p class="mt-7 mx-auto max-w-2xl text-lg text-zinc-400 leading-relaxed">Interested in data analytics, IoT, AI applications or community collaboration? I'd be glad to connect.</p><div class="flex flex-wrap items-center justify-center gap-4 mt-9"><a href="mailto:diwakarchoubey11@zohomail.in" class="primary-button inline-flex items-center gap-2 rounded-lg px-6 py-3.5 font-semibold">Email Me ↗</a><a href="https://github.com/AiTechDiwakar" target="_blank" class="outline-button inline-flex items-center gap-2 rounded-lg px-6 py-3.5 font-semibold">GitHub ↗</a><a href="https://www.linkedin.com/in/aitechdiwakar" target="_blank" class="outline-button inline-flex items-center gap-2 rounded-lg px-6 py-3.5 font-semibold">LinkedIn ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10"><div class="max-w-7xl mx-auto px-5 md:px-8 py-7 flex flex-col sm:flex-row gap-4 justify-between items-center"><a href="#home" class="font-bold text-lg">Diwakar<span class="accent-text">.</span></a><p class="text-xs text-zinc-500 text-center">Data Analyst · IoT Engineer · GDG Ranchi · NVIDIA Developer Program</p><p class="text-xs text-zinc-500">© <span id="year"></span> Diwakar Choubey</p></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
